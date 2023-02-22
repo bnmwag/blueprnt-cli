@@ -4,7 +4,7 @@ import { PROJECT_NAME } from '../index.js';
 
 async function askForDirEntry() {
     const answer = await confirm({
-        message: 'You want to enter the project',
+        message: 'Start right away?',
         default: true
     });
     if (!answer) process.exit(1);

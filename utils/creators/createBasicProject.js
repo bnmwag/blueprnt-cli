@@ -41,8 +41,7 @@ function createBasicProject() {
     console.log(`
     ${PROJECT_NAME} ${chalk.white.dim('got created')}
     _________________________________________________________________________________\n
-    ${chalk.blue("happy coding :)")}
-    \n
+    run live server ${chalk.white.dim('to see the project')}
     `);
 };
 

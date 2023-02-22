@@ -5,6 +5,7 @@ import askForProjectType from './utils/askForProjectType.js';
 import askForDocName from './utils/askForDocName.js';
 import createDirTree from './utils/createDirTree.js';
 import askForDirEntry from './utils/askForDirEntry.js';
+import deleteLines from './utils/deleteLines.js';
 
 export var PROJECT_TYPE = "";
 export var PROJECT_NAME = "";
@@ -21,14 +22,18 @@ async function main() {
 
     PROJECT_TYPE = await askForProjectType()
     PROJECT_NAME = await askForDocName()
+    deleteLines(2);
     console.log(`
-
-    Creating ${PROJECT_NAME} - a ${PROJECT_TYPE} project:
+    ${PROJECT_NAME} ${chalk.dim("gets created")}:
     _________________________________________________________________________________\n
     `);
     await sleep(1000);
 
     await createDirTree();
+    console.log(`
+    ${chalk.dim("Now it's your turn to create")}
+
+    `);
 
     if (PROJECT_TYPE != "next13") {
         await askForDirEntry();
