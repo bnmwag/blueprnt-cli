@@ -7,7 +7,7 @@ Create project structures in seconds using templates like Vite, Next.js 13 (beta
 
 ## Installation
 
-Install my-project with npm
+Install blueprnt with npm globaly
 
 ```bash
   npm i cpr-bnm@latest -g
@@ -16,7 +16,7 @@ Install my-project with npm
 ## Usage/Examples
 
 ```bash
-  npx create
+  npx choose-prnt
 ```
 
 
