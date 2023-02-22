@@ -1,11 +1,12 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
+import chalk from 'chalk';
 
 import deleteLines from './deleteLines.js';
 
-let PROJECT_NAME = "my-project";
+let PROJECT_NAME = "";
 async function askForDocName(alredyCheckedExisting = false) {
-    let answerMassage = `${alredyCheckedExisting ? `${PROJECT_NAME} alredy exists. Try another name` : "Choose your Document Name"}:`;
+    let answerMassage = `${alredyCheckedExisting ? `${chalk.reset(chalk.cyan.underline(PROJECT_NAME))} ${chalk.bold('already exists. Try another name')}` : "Choose your Document Name"}:`;
     const answer = await inquirer.prompt([{
         name: 'doc_name',
         type: 'input',
@@ -16,17 +17,15 @@ async function askForDocName(alredyCheckedExisting = false) {
         },
     },]);
 
-    answer.doc_name = answer.doc_name.toLowerCase().replace(/ /g, '-').replace(/_/g, '-');
     PROJECT_NAME = answer.doc_name;
+    PROJECT_NAME = PROJECT_NAME.toLowerCase().replace(/ /g, '-').replace(/_/g, '-');
     
     if (fs.existsSync(PROJECT_NAME)) {
-        if (!alredyCheckedExisting) {
-            alredyCheckedExisting = true;
-        }
         deleteLines()
         await askForDocName(true)
-    }
-    return answer.doc_name;
+    }  
+
+    return PROJECT_NAME;
 }
 
 export default askForDocName;
