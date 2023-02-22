@@ -1,10 +1,9 @@
 
-# Project create cli
+# blueprnt cli
 
-i was a bit bored and was thinking on how i can make my coding expirience easier and faster.  
-So i created a custom cli which creates me folder structures based on some templates i like to work with
+Streamline your coding process with my custom CLI tool blueprnt!  
 
-
+Create project structures in seconds using templates like Vite, Next.js 13 (beta), and basic HTML/CSS/JS setup. Our tool is easy to install with npm and built using the latest Node.js technology for maximum compatibility and flexibility. Spend less time on repetitive tasks and more time coding. Try our CLI tool today!
 
 ## Installation
 
