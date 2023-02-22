@@ -15,6 +15,13 @@ Install my-project with npm
 ```
 
 
+## Usage/Examples
+
+```bash
+  npx create
+```
+
+
 ## Currently supported layouts
 
 - Vite template 
