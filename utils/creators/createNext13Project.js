@@ -1,4 +1,4 @@
-import { PROJECT_NAME } from '../index.js';
+import { PROJECT_NAME } from '../../index.js';
 import clipboardy from 'clipboardy';
 
 async function createNext13Project() {

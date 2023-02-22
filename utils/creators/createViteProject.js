@@ -2,8 +2,7 @@ import fs from 'fs';
 import chalk from 'chalk';
 import clipboardy from 'clipboardy';
 
-import { PROJECT_NAME } from '../index.js';
-
+import { PROJECT_NAME } from '../../index.js';
 
 async function createViteProject() {
     const cssContent = "*{margin: 0; padding: 0; box-sizing: border-box;font-family: 'Arial', sans-serif}\n"
