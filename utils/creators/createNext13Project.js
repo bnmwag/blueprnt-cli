@@ -9,6 +9,10 @@ async function createNext13Project() {
     }).on('error', (error) => {
         console.error(`error: ${error.message}`);
     }).on('close', () => {
+        console.log(`
+        
+    ${chalk.dim("Now it's your turn to create")}
+        `);
         askForDirEntry();
     });
 }

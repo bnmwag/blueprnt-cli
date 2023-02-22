@@ -39,9 +39,10 @@ function createBasicProject() {
     fs.mkdirSync(`${PROJECT_NAME}/media/font`);
 
     console.log(`
-    ${PROJECT_NAME} ${chalk.white.dim('got created')}
-    _________________________________________________________________________________\n
-    run live server ${chalk.white.dim('to see the project')}
+    ${PROJECT_NAME} ${chalk.white.dim('got created\n')}
+    ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――\n
+
+    run a live server ${chalk.white.dim('to see the project')}
     `);
 };
 

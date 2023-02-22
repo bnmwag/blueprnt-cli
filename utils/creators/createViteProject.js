@@ -77,8 +77,9 @@ async function createViteProject() {
     fs.writeFileSync(`${PROJECT_NAME}/vite.config.js`, viteConfigContent);
 
     console.log(`
-    ${PROJECT_NAME} ${chalk.white.dim('got created')}
-    _________________________________________________________________________________\n
+    ${PROJECT_NAME} ${chalk.white.dim('got created\n')}
+    ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――\n
+    
     'npm i' ${chalk.white.dim('to install packages (copied to clipboard)')}
     'npm run dev' ${chalk.white.dim('to start dev server')}
     `);

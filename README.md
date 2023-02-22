@@ -13,7 +13,6 @@ Install my-project with npm
   npm i cpr-bnm@latest -g
 ```
 
-
 ## Usage/Examples
 
 ```bash

@@ -5,7 +5,6 @@ import { PROJECT_NAME, PROJECT_TYPE } from "../index.js";
 import createViteProject from './creators/createViteProject.js';
 import createNext13Project from './creators/createNext13Project.js';
 import createBasicProject from './creators/createBasicProject.js';
-import deleteLines from './deleteLines.js';
 
 function createBase() {
     fs.mkdirSync(PROJECT_NAME);
@@ -14,8 +13,6 @@ function createBase() {
 }
 
 async function createDirTree() {
-    await deleteLines(5)
-
     if (PROJECT_TYPE != "next13") createBase();
 
     switch (PROJECT_TYPE) {

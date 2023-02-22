@@ -18,24 +18,25 @@ function sleep(ms) {
 async function main() {
     console.log("\u001b[2J\u001b[0;0H");
     console.log("\n");
-    console.log(PRM_COLOR("Create Project\n"));
+    console.log(PRM_COLOR("Create Project with blueprnt 🩻\n"));
 
     PROJECT_TYPE = await askForProjectType()
     PROJECT_NAME = await askForDocName()
     deleteLines(2);
     console.log(`
-    ${PROJECT_NAME} ${chalk.dim("gets created")}:
-    _________________________________________________________________________________\n
+    ${PROJECT_NAME} ${chalk.white.dim("gets created\n")}
+    ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――\n
+
     `);
     await sleep(1000);
+    deleteLines(7);
 
     await createDirTree();
-    console.log(`
-    ${chalk.dim("Now it's your turn to create")}
-
-    `);
 
     if (PROJECT_TYPE != "next13") {
+        console.log(`
+    ${chalk.dim("Now it's your turn to create")}
+        `);
         await askForDirEntry();
     }
 }
