@@ -13,16 +13,6 @@ Install my-project with npm
 ```bash
   npm i cpr-bnm@latest -g
 ```
-    
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
 
 
 ## Currently supported layouts
