@@ -38,11 +38,12 @@ function createBasicProject() {
     fs.mkdirSync(`${PROJECT_NAME}/media/icon`);
     fs.mkdirSync(`${PROJECT_NAME}/media/font`);
 
-    console.log("\u001b[2J\u001b[0;0H");
     console.log(`
-    ${PROJECT_NAME} ${chalk.white.dim('got created\n')}
+    ${PROJECT_NAME} ${chalk.white.dim('got created')}
+    _________________________________________________________________________________\n
     ${chalk.blue("happy coding :)")}
+    \n
     `);
-}
+};
 
 export default createBasicProject;

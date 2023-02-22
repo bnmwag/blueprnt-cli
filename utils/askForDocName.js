@@ -1,7 +1,6 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 import chalk from 'chalk';
-
 import deleteLines from './deleteLines.js';
 
 let PROJECT_NAME = "";
@@ -21,8 +20,8 @@ async function askForDocName(alredyCheckedExisting = false) {
     PROJECT_NAME = PROJECT_NAME.toLowerCase().replace(/ /g, '-').replace(/_/g, '-');
     
     if (fs.existsSync(PROJECT_NAME)) {
-        deleteLines()
-        await askForDocName(true)
+        deleteLines();
+        await askForDocName(true);
     }  
 
     return PROJECT_NAME;

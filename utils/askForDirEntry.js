@@ -1,6 +1,5 @@
 import confirm from '@inquirer/confirm';
 import { exec } from 'child_process';
-
 import { PROJECT_NAME } from '../index.js';
 
 async function askForDirEntry() {
