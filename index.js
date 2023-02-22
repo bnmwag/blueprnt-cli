@@ -22,7 +22,8 @@ async function main() {
     PROJECT_NAME = await askForDocName()
     await createDirTree();
 
-    if (!PROJECT_TYPE == "next13") {
+    if (PROJECT_TYPE != "next13") {
+        //     console.log("ahh");
         await askForDirEntry();
     }
 }

@@ -25,7 +25,7 @@ Install my-project with npm
 ## Currently supported layouts
 
 - Vite template 
-- next.js 13 (only create command copied to clipboard ☹️ )
+- next.js 13 template
 - Basic HTML/CSS/JS setup
 - hopefully more in the future...
 
