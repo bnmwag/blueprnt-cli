@@ -5,7 +5,7 @@ async function askForProjectType() {
         name: 'project_type',
         type: 'list',
         message: 'Choose your Project Type:',
-        choices: ['vite', 'next13', 'basic'],
+        choices: ['vite', 'next13', 'react', 'basic'],
         required: true,
         default () {
             return "vite";

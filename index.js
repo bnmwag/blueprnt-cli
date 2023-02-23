@@ -5,10 +5,12 @@ import askForProjectType from './utils/askForProjectType.js';
 import askForDocName from './utils/askForDocName.js';
 import createDirTree from './utils/createDirTree.js';
 import askForDirEntry from './utils/askForDirEntry.js';
+import askForProjectOptions from './utils/askForProjectOptions.js';
 import deleteLines from './utils/deleteLines.js';
 
 export var PROJECT_TYPE = "";
 export var PROJECT_NAME = "";
+export var PROJECT_OPTIONS = [{}];
 const PRM_COLOR = chalk.hex('#13A7CD')
 
 function sleep(ms) {
@@ -20,9 +22,13 @@ async function main() {
     console.log("\n");
     console.log(PRM_COLOR("Create Project with blueprnt 🩻\n"));
 
-    PROJECT_TYPE = await askForProjectType()
-    PROJECT_NAME = await askForDocName()
-    deleteLines(2);
+    PROJECT_TYPE = await askForProjectType();
+    deleteLines(1);
+    PROJECT_NAME = await askForDocName();
+    deleteLines(1);
+    PROJECT_OPTIONS = await askForProjectOptions();
+    deleteLines(3);
+
     console.log(`
     ${PROJECT_NAME} ${chalk.white.dim("gets created\n")}
     ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――\n
@@ -33,7 +39,7 @@ async function main() {
 
     await createDirTree();
 
-    if (PROJECT_TYPE != "next13") {
+    if (PROJECT_TYPE != "next13" && PROJECT_TYPE != "react") {
         console.log(`
     ${chalk.dim("Now it's your turn to create")}
         `);

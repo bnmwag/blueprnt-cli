@@ -3,7 +3,7 @@
 
 Streamline your coding process with my custom CLI tool blueprnt!  
 
-Create project structures in seconds using templates like Vite, Next.js 13 (beta), and basic HTML/CSS/JS setup. Our tool is easy to install with npm and built using the latest Node.js technology for maximum compatibility and flexibility. Spend less time on repetitive tasks and more time coding. Try our CLI tool today!
+Create project structures in seconds using templates like Vite, Next.js 13 (beta),... setup. Our tool is easy to install with npm and built using the latest Node.js technology for maximum compatibility and flexibility. Spend less time on repetitive tasks and more time coding. Try our CLI tool today!
 
 ## Installation
 
@@ -43,6 +43,11 @@ my-project
 - next.js 13 template
 ```bash
 simple next.js 13 (beta) tree
+```
+
+- next.js 13 template
+```bash
+simple react tree
 ```
 
 - Basic HTML/CSS/JS setup

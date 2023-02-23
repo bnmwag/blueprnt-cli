@@ -4,6 +4,7 @@ import { PROJECT_NAME, PROJECT_TYPE } from "../index.js";
 
 import createViteProject from './creators/createViteProject.js';
 import createNext13Project from './creators/createNext13Project.js';
+import createReactProject from './creators/createReactProject.js';
 import createBasicProject from './creators/createBasicProject.js';
 
 function createBase() {
@@ -13,7 +14,7 @@ function createBase() {
 }
 
 async function createDirTree() {
-    if (PROJECT_TYPE != "next13") createBase();
+    if (PROJECT_TYPE != "next13" && PROJECT_TYPE != "react") createBase();
 
     switch (PROJECT_TYPE) {
         case "vite":
@@ -21,6 +22,9 @@ async function createDirTree() {
             break;
         case "next13":
             await createNext13Project();
+            break;
+        case "react":
+            await createReactProject();
             break;
         case "basic":
             await createBasicProject();

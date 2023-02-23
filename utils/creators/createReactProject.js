@@ -3,9 +3,9 @@ import { spawn } from 'child_process';
 import askForDirEntry from '../askForDirEntry.js';
 import chalk from 'chalk';
 
-async function createNext13Project() {
+async function createReactProject() {
 
-    const ex = spawn('npx', ['create-next-app@latest', '--experimental-app', PROJECT_NAME, '-y'], {
+    const ex = spawn('npx', ['create-react-app@latest', PROJECT_NAME, '-y'], {
         stdio: 'inherit'
     }).on('error', (error) => {
         console.error(`error: ${error.message}`);
@@ -18,4 +18,4 @@ async function createNext13Project() {
     });
 }
 
-export default createNext13Project;
+export default createReactProject;
